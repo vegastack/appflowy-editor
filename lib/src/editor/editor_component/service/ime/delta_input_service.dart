@@ -133,6 +133,9 @@ class DeltaTextInputService extends TextInputService with DeltaTextInputClient {
     TextInputControl? newControl,
   ) {}
 
+  // Flutter 3.44 added TextInputClient.onFocusReceived; same as upstream main.
+  bool onFocusReceived() => false;
+
   @override
   void performSelector(String selectorName) {
     final currentTextEditingValue = this.currentTextEditingValue;
